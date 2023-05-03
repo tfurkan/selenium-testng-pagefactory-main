@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="utilities.listeners.Listener"/>
+        <listener class-name="utilities.listeners.AnnotationTransformer"/>
+    </listeners>
+    <test name="Tests">
+        <parameter name="browser" value="firefox" />
+
+        <classes>
+            <class name="test.JobDetailCases">
+                <parameter name="job" value="Quality Assurance"/>
+                <parameter name="location" value="Istanbul, Turkey"/>
+                <methods>
+                    <include name="checkJobDetails"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
